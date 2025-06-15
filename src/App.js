@@ -1,25 +1,44 @@
-import logo from './logo.svg';
 import './App.css';
-
-function App() {
+import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import Navbar from './Components/Navbar';
+import Home from './Components/Home.jsx';
+import Donate from './Components/Donate.jsx';
+import Event from './Components/Event.jsx';
+import Partnership from './Components/Partnership.jsx';
+import About from './Components/About.jsx';
+import Contact from './Components/Contact.jsx';
+import Login from './Components/Login.jsx';
+import Signup from './Components/Signup.jsx';
+import Footer from './Components/Footer.jsx';
+function AppWrapper() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <App />
+    </Router>
+  );
+}
+function App() {
+  const location = useLocation();
+  //hidden footer on Login and signup
+  const hidden = location.pathname === "/login" || location.pathname === "/register"; 
+  return (
+    <>
+    <Navbar />
+      <Routes>
+        <Route path="/" element={<Navigate to="/home" />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/donate" element={<Donate/>}/>
+        <Route path="/event" element={<Event/>}/>
+        <Route path="/partnership" element={<Partnership/>}/>
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/login" element={<Login/>}/>
+        <Route path="/register" element={<Signup/>}/>
+      </Routes>
+      {!hidden && <Footer />}
+    </>
   );
 }
 
-export default App;
+export default AppWrapper;

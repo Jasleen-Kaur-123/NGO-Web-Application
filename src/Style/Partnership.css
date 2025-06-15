@@ -1,0 +1,294 @@
+/* Partnership Page Styles */
+.partnership-container {
+  width: 100%;
+  min-height: 100vh;
+  background: #ff4c00;
+  color: #fff;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  padding: 0;
+}
+
+.partnership-hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 50px;
+    justify-content: space-between;
+    padding: 7px 7vw 40px 9vw;
+    background: #ff4c00;
+}
+
+.partnership-content {
+  flex: 1 1 400px;
+  max-width: 600px;
+}
+
+.partnership-content h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.partnership-content .highlight {
+  color: #fff;
+  background: #d12d00;
+  padding: 0 8px;
+  border-radius: 4px;
+}
+
+.partnership-content h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.partnership-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+
+.partnership-content p {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.contact-btn {
+  background: #fff;
+  color: #ff4c00;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 18px 40px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  margin-top: 10px;
+}
+.contact-btn:hover {
+  background: #d12d00;
+  color: #fff;
+}
+
+.partnership-image {
+  flex: 1 1 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 300px;
+  margin-top: 30px;
+}
+.partnership-image img {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
+
+/***** Partners Section *****/
+.partners-section {
+  background: #fff;
+  color: #222;
+  padding: 50px 5vw 60px 5vw;
+  text-align: center;
+}
+.partners-section h3 {
+  font-size: 2.2rem;
+  margin-bottom: 35px;
+  font-weight: 700;
+}
+.partners-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+.partner-logo {
+  background: #f7f7f7;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  padding: 24px 32px 16px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 140px;
+  max-width: 180px;
+  transition: transform 0.2s;
+}
+.partner-logo:hover {
+  transform: translateY(-8px) scale(1.04);
+}
+.partner-logo img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+.partner-logo span {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ff4c00;
+}
+
+/* --- Partners Flip Card Section --- */
+.partners-flip-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 70px;
+  margin-top: 32px;
+}
+.partner-flip-card {
+  background: transparent;
+  width: 240px;
+  height: 320px;
+  perspective: 1200px;
+  border-radius: 16px;
+  margin-bottom: 18px;
+}
+.partner-flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.4,0,0.2,1);
+  transform-style: preserve-3d;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(60,72,88,0.09);
+}
+.partner-flip-card:hover .partner-flip-inner,
+.partner-flip-card:focus-within .partner-flip-inner {
+  transform: rotateY(180deg);
+}
+.partner-flip-front, .partner-flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  box-shadow: 0 2px 16px rgba(60,72,88,0.07);
+  overflow: hidden;
+}
+.partner-flip-front {
+  z-index: 2;
+  background: #f7f7f7;
+  border: 1.5px solid #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 18px;
+}
+.partner-flip-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  margin-bottom: 0.7rem;
+}
+.partner-flip-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ff4c00;
+  margin-top: 0.5rem;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+.partner-flip-back {
+  background: #fff;
+  color: #232323;
+  transform: rotateY(180deg);
+  border: 1.5px solid #f0f0f0;
+  padding: 1.2rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  box-shadow: 0 2px 16px rgba(60,72,88,0.07);
+}
+.partner-flip-back ul {
+  list-style: disc inside;
+  padding: 0;
+  margin: 0;
+}
+.partner-flip-back li {
+  font-size: 1.05rem;
+  color: #444;
+  margin-bottom: 0.7rem;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+  .partnership-hero {
+    flex-direction: column;
+    padding: 40px 3vw 30px 3vw;
+  }
+  .partnership-content, .partnership-image {
+    max-width: 100%;
+    min-width: 0;
+  }
+  .partnership-image {
+    margin-top: 24px;
+  }
+  .partners-flip-grid {
+    gap: 18px;
+  }
+  .partner-flip-card {
+    width: 180px;
+    height: 240px;
+  }
+  .partner-flip-img {
+    height: 110px;
+  }
+}
+@media (max-width: 600px) {
+  .partnership-content h1 {
+    font-size: 2rem;
+  }
+  .partnership-content h3 {
+    font-size: 1rem;
+  }
+  .partnership-content p {
+    font-size: 1rem;
+  }
+  .contact-btn {
+    font-size: 1rem;
+    padding: 12px 24px;
+  }
+  .partners-logos {
+    gap: 18px;
+  }
+  .partner-logo {
+    padding: 14px 10px 10px 10px;
+    min-width: 90px;
+    max-width: 120px;
+  }
+  .partner-logo img {
+    width: 48px;
+    height: 48px;
+  }
+  .partner-logo span {
+    font-size: 0.9rem;
+  }
+  .partners-flip-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+  .partner-flip-card {
+    width: 98vw;
+    max-width: 340px;
+    height: 200px;
+  }
+  .partner-flip-img {
+    height: 70px;
+  }
+}

@@ -1,0 +1,135 @@
+/* Signup Page Background */
+.signup-page-bg {
+  min-height: 100vh;
+  width: 99vw;
+  background: #fafbfc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup-card {
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 16px rgba(60,72,88,0.07);
+  padding: 1rem 2rem 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin: 1.2rem 0;
+  border: 1.5px solid #eee;
+}
+
+.signup-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.signup-label {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 0.2rem;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+.signup-input {
+  width: 100%;
+  padding: 0.7rem 0rem;
+  border: 1.5px solid #e5e5e5;
+  border-radius: 6px;
+  font-size: 1.05rem;
+  background: #fafbfc;
+  color: #222;
+  outline: none;
+  transition: border 0.2s;
+}
+.signup-input:focus {
+  border-color: #0091ea;
+}
+
+.signup-terms-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.7rem 0 0.2rem 0;
+}
+.signup-terms-checkbox {
+  width: 1rem;
+  height: 1rem;
+}
+.signup-terms-label {
+  font-size: 1rem;
+  color: #444;
+}
+.signup-terms-link {
+  color: #0091ea;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 0.2rem;
+  transition: color 0.2s;
+}
+.signup-terms-link:hover {
+  color: #4bb5f7;;
+  text-decoration: underline;
+}
+
+.signup-btn {
+  width: 100%;
+  background: #0091ea;
+  color: #fff;
+  font-size: 1.13rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  padding: 0.8rem 0;
+  margin-top: 0.7rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(30,32,36,0.07);
+}
+.signup-btn:disabled {
+  background: #0091ea;
+  color: #fff;
+  cursor: not-allowed;
+}
+.signup-btn:not(:disabled):hover {
+  background: #1294e4;;
+  color: #fff;
+}
+
+.signup-login-row {
+  text-align: center;
+  color: #444;
+  font-size: 1rem;
+  margin-top: 1.2rem;
+}
+.signup-login-link {
+  color: #0091ea;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 0.2rem;
+  transition: color 0.2s;
+}
+.signup-login-link:hover {
+  color: #0091ea;
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .signup-card {
+    max-width: 99vw;
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+  }
+}

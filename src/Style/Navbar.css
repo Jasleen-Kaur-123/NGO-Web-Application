@@ -1,0 +1,127 @@
+.navbar {
+        background: #fff;
+        color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 8vh;
+        margin-bottom: 0.5rem;
+        position: relative;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+        z-index: 10;
+    }
+
+
+.navbar-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  letter-spacing: 1px;
+  color: black;
+  cursor: pointer;
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    font-weight: bold;
+}
+
+.navbar-list{
+    display: flex;
+    align-items: center;
+    gap: 1.5vw;
+    margin: 0;
+    padding: 0;
+}
+.navbar-auth{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.navbar-list li, .navbar-auth li {
+    list-style: none;
+}
+
+.navbar-list li a, .navbar-auth li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 1.3rem;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.navbar-list li a:hover, .navbar-auth li a:hover {
+    background: #f2f2f2;
+}
+.navbar-auth li a:hover{
+    background: #def6e4;
+}
+.navbar-hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.bar {
+    width: 28px;
+    height: 3px;
+    background: #000;
+    margin: 4px 0;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* Responsive Styles */
+@media (max-width: 1170px) {
+    .navbar {
+        flex-direction: row;
+        height: auto;
+        padding: 10px 2vw;
+    }
+    .navbar-title {
+        font-size: 1.5rem;
+    }
+    .navbar-hamburger {
+        display: flex;
+    }
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        background: #fff;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100vw;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        padding-bottom: 10px;
+    }
+    .navbar-links.active {
+        display: flex;
+    }
+    .navbar-list, .navbar-auth {
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+    }
+    .navbar-list li, .navbar-auth li {
+        width: 100%;
+        padding: 12px 24px;
+        border-bottom: 1px solid #eee;
+        margin: 0;
+    }
+    .navbar-auth {
+        border-top: 1px solid #eee;
+    }
+}

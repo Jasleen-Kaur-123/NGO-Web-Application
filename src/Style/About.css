@@ -1,0 +1,283 @@
+/* About Us Page Styles */
+.about-page-container {
+  width: 100%;
+  min-height: 100vh;
+  background: #f7f8fa;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+/***** Section 1: Impact *****/
+.about-impact-section {
+  padding: 30px 0 30px 0;
+  text-align: center;
+  background: #f7f8fa;
+}
+.about-impact-section h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #232323;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  letter-spacing: -2px;
+}
+.about-impact-years {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #6c63ff;
+  margin-bottom: 30px;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+.about-impact-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px 32px;
+  justify-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.about-impact-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(60,72,88,0.07);
+  padding: 0 0 18px 0;
+  min-width: 260px;
+  max-width: 340px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  transition: box-shadow 0.2s, transform 0.2s;
+  border: 1px solid #f0f0f0;
+  overflow: hidden;
+}
+.about-impact-card:hover {
+  box-shadow: 0 6px 24px rgba(60,72,88,0.13);
+  transform: translateY(-4px) scale(1.03);
+}
+.about-impact-card-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  background: #f3f3f3;
+}
+.about-impact-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid #f0f0f0;
+}
+.about-impact-card-title {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(90deg, rgba(44,44,44,0.85) 0%, rgba(44,44,44,0.25) 100%);
+  padding: 12px 18px 8px 18px;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  display: flex;
+  align-items: flex-end;
+}
+.about-impact-card-title-text {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+.about-impact-card-content {
+  padding: 18px 18px 8px 18px;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-impact-card-content p {
+  color: #232323;
+  font-size: 1.05rem;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  text-align: center;
+}
+.about-impact-card-progress {
+  padding: 0 18px 8px 18px;
+}
+.about-impact-card-progress-label {
+  font-size: 0.98rem;
+  color: #6c63ff;
+  font-weight: 500;
+  margin-bottom: 4px;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+.about-impact-card-progress-bar-bg {
+  width: 100%;
+  height: 12px;
+  background: #f0f0f0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.about-impact-card-progress-bar-fill {
+  height: 100%;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #6c63ff 0%, #ff4c00 100%);
+  transition: width 0.7s cubic-bezier(0.4,0,0.2,1);
+}
+.about-impact-card-action {
+  padding: 12px 18px 0 18px;
+  display: flex;
+  justify-content: center;
+}
+.about-impact-card-donate-btn {
+  background: #ff4c00;
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 700;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  box-shadow: 0 2px 8px rgba(60,72,88,0.07);
+}
+.about-impact-card-donate-btn:hover {
+  background: #6c63ff;
+  color: #fff;
+}
+
+
+/***** Section 3: FAQ *****/
+.about-faq-section {
+  background: #f7f8fa;
+  padding: 50px 0 40px 0;
+  text-align: center;
+}
+.about-faq-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 32px;
+  color:black;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+.about-faq-list {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+.about-faq-item {
+  margin-bottom: 18px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(60,72,88,0.07);
+  overflow: hidden;
+  border: 1px solid #f0f0f0;
+}
+.about-faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #232323;
+  padding: 18px 24px;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.2s;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+.about-faq-question:hover {
+  background: #f3f3f3;
+}
+.about-faq-arrow {
+  margin-left: 12px;
+  font-size: 1.2rem;
+  transition: transform 0.3s;
+}
+.about-faq-arrow.open {
+  transform: rotate(180deg);
+}
+.about-faq-answer {
+  background: #f7f7f7;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.4,0,0.2,1);
+  max-height: 0px;
+  padding: 0 24px;
+}
+.about-faq-answer.open {
+  padding: 16px 24px;
+  max-height: 200px;
+}
+.about-faq-answer p {
+  margin: 0;
+  color: #444;
+  font-size: 1rem;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+/***** Responsive Styles *****/
+@media (max-width: 1100px) {
+  .about-impact-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 700px) {
+  .about-impact-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 18px 0;
+  }
+  .about-impact-section h2 {
+    font-size: 2rem;
+  }
+  .about-impact-card-img-wrap {
+    height: 140px;
+  }
+}
+@media (max-width: 600px) {
+  .about-impact-section h2,
+  .about-progress-section h2,
+  .about-faq-section h2{
+    font-size: 1.2rem;
+  }
+  .about-impact-section {
+    padding: 18px 0 10px 0;
+  }
+  .about-impact-card-img-wrap {
+    height: 140px;
+  }
+  .about-progress-section {
+    padding: 20px 0 10px 0;
+  }
+  .about-progress-bars {
+    gap: 10px;
+  }
+  .about-progress-label-row {
+    font-size: 0.9rem;
+  }
+  .about-progress-bar-bg {
+    height: 10px;
+  }
+  .about-faq-section {
+    padding: 20px 0 10px 0;
+  }
+  .about-faq-list {
+    max-width: 98vw;
+  }
+  .about-faq-question {
+    font-size: 1rem;
+    padding: 10px 10px;
+  }
+  .about-faq-answer.open {
+    padding: 8px 10px;
+  }
+}
